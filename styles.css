@@ -1,0 +1,43 @@
+body {
+  background-color: rgba(0, 82, 153, 0.5);
+  width: 100vw;
+  height: 100vh;
+  margin: 150px auto 0;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px;
+}
+
+#task-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.block {
+  width: 150px;
+  height: 250px;
+  background: rgba(0, 82, 153, 0.9);
+  display: flex;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 82, 153, 0.5);
+  justify-content: center;
+  padding: 10px;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+.pending-block {
+  color: rgb(185, 196, 30);
+}
+
+.doing-block {
+  color: rgba(148, 150, 238, 0.918);
+}
+
+.done-block {
+  color: rgb(12, 173, 12);
+}
