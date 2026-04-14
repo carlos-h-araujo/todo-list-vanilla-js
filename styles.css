@@ -30,14 +30,14 @@ h1 {
   font-size: 25px;
 }
 
-.pending-block {
+.pending-title {
   color: rgb(185, 196, 30);
 }
 
-.doing-block {
+.doing-title {
   color: rgba(148, 150, 238, 0.918);
 }
 
-.done-block {
+.done-title {
   color: rgb(12, 173, 12);
 }
