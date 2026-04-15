@@ -6,16 +6,34 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Simple To-Do List</h1>
+    <h1>Simple To-Do List (Kanban like)</h1>
     <main id="task-container">
       <div class="block pending-block">
-        <h2 class="pending-title">Gabriel, salve meu Quirido!</h2>
+        <h2 class="pending-title">Pending</h2>
+        <input
+          class="task-input pending-input"
+          type="text"
+          placeholder="Add a new task..."
+        />
+        <ul id="pending-list"></ul>
       </div>
       <div class="block doing-block">
         <h2 class="doing-title">Doing</h2>
+        <input
+          class="task-input doing-input"
+          type="text"
+          placeholder="Add a new task..."
+        />
+        <ul id="doing-list"></ul>
       </div>
       <div class="block done-block">
         <h2 class="done-title">Done</h2>
+        <input
+          class="task-input done-input"
+          type="text"
+          placeholder="Add a new task..."
+        />
+        <ul id="done-list"></ul>
       </div>
     </main>
     <script src="script.js"></script>

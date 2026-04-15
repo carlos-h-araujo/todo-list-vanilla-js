@@ -10,6 +10,10 @@ h1 {
   margin: 20px;
 }
 
+h2 {
+  font-size: 1.75em;
+}
+
 #task-container {
   display: flex;
   gap: 20px;
@@ -24,10 +28,10 @@ h1 {
   display: flex;
   border-radius: 8px;
   border: 1px solid rgba(0, 82, 153, 0.5);
-  justify-content: center;
-  padding: 10px;
-  font-weight: bolder;
-  font-size: 25px;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px 0;
+  flex-direction: column;
 }
 
 .pending-title {
@@ -40,4 +44,16 @@ h1 {
 
 .done-title {
   color: rgb(12, 173, 12);
+}
+
+.task-input {
+  width: 9em;
+  height: 1.5em;
+  padding: 4px;
+  border: 2px solid rgba(3, 18, 32, 0.5);
+  border-radius: 5px;
+}
+
+li {
+  appearance: none;
 }
