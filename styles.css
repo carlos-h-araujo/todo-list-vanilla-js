@@ -1,8 +1,26 @@
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
 body {
   background-color: rgba(0, 82, 153, 0.5);
   width: 100vw;
   height: 100vh;
-  margin: 150px auto 0;
+  margin: 250px auto 0;
+  overflow: hidden;
 }
 
 h1 {
@@ -11,7 +29,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.75em;
+  font-size: 1.5em;
 }
 
 #task-container {
@@ -34,16 +52,20 @@ h2 {
   flex-direction: column;
 }
 
+.block:hover {
+  border: 1px solid yellow;
+}
+
 .pending-title {
-  color: rgb(185, 196, 30);
+  color: rgb(223, 236, 40);
 }
 
 .doing-title {
-  color: rgba(148, 150, 238, 0.918);
+  color: rgb(148, 238, 238);
 }
 
 .done-title {
-  color: rgb(12, 173, 12);
+  color: rgb(18, 231, 18);
 }
 
 .task-input {
@@ -52,8 +74,31 @@ h2 {
   padding: 4px;
   border: 2px solid rgba(3, 18, 32, 0.5);
   border-radius: 5px;
+  background-color: rgb(158, 217, 240);
+  color: black;
+}
+
+ul {
+  padding: 5px;
+  margin: 10px 0 0 0;
+  list-style: none;
+  overflow-y: auto;
 }
 
 li {
-  appearance: none;
+  width: 7em;
+  height: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 2px;
+  background: rgba(67, 180, 233, 0.671);
+  margin: 2px;
+  border-radius: 3px;
+}
+
+li:hover {
+  border: 1px solid yellow;
+  color: azure;
+  font-weight: bold;
 }

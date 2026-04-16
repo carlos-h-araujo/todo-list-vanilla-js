@@ -43,6 +43,8 @@ taskInput.forEach((input) => {
       status.append(task);
 
       addTask(input.value, actualStatus);
+
+      input.value = "";
     }
   });
 });
