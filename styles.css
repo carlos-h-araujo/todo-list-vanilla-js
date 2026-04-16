@@ -86,8 +86,8 @@ ul {
 }
 
 li {
+  display: flex;
   width: 7em;
-  height: 15px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -95,10 +95,24 @@ li {
   background: rgba(67, 180, 233, 0.671);
   margin: 2px;
   border-radius: 3px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 li:hover {
-  border: 1px solid yellow;
-  color: azure;
+  background-color: yellow;
+}
+
+button {
+  background: none;
+  border: none;
+  color: rgb(194, 111, 111);
+  margin: 0;
+  padding: 0;
+  text-align: end;
+}
+
+button:hover {
   font-weight: bold;
+  color: rgb(255, 0, 0);
 }

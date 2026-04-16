@@ -34,15 +34,29 @@ taskInput.forEach((input) => {
         actualStatus = STATUS.DONE;
       }
 
+      const value = input.value.trim();
+
       const status = document.querySelector(`#${actualStatus}-list`);
 
       const task = document.createElement("li");
+      const btn = document.createElement("button");
 
-      task.textContent = input.value;
+      if (!value) {
+        return;
+      }
 
+      task.textContent = value;
+      btn.textContent = "✖";
+
+      task.append(btn);
       status.append(task);
 
-      addTask(input.value, actualStatus);
+      btn.addEventListener("click", () => {
+        const li = btn.parentElement;
+        li.remove();
+      });
+
+      addTask(value, actualStatus);
 
       input.value = "";
     }
