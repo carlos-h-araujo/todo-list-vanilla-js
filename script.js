@@ -40,6 +40,7 @@ taskInput.forEach((input) => {
 
       const task = document.createElement("li");
       const btn = document.createElement("button");
+      const btnNext = document.createElement("button");
 
       if (!value) {
         return;
@@ -47,13 +48,26 @@ taskInput.forEach((input) => {
 
       task.textContent = value;
       btn.textContent = "✖";
+      btnNext.textContent = "⇥";
 
       task.append(btn);
+      task.append(btnNext);
       status.append(task);
 
       btn.addEventListener("click", () => {
         const li = btn.parentElement;
         li.remove();
+      });
+
+      btnNext.addEventListener("click", () => {
+        const li = btnNext.parentElement;
+        const ul = li.parentElement;
+
+        if (ul.id === "pending-list") {
+          document.querySelector("#doing-list").append(li);
+        } else if (ul.id === "doing-list") {
+          document.querySelector("#done-list").append(li);
+        }
       });
 
       addTask(value, actualStatus);
